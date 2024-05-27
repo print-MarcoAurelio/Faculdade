@@ -1,6 +1,3 @@
-# # Inicializando listas para armazenar os dados dos carros
-# carros = []
-# consumo = []
 
 
 carro = []
