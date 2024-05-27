@@ -6,16 +6,17 @@ def calcular_consumo_combustivel(modelo_carro, consumo_km_1, distancia, preco_ga
         'custo_total': custo_total,
     }
 
+
 modelos_carros = [
-    input("Modelo do carro 1: "),
-    input("Modelo do carro 2: "),
-    input("Modelo do carro 3: "),
+    input("Modelo do carro 1 ONIX, CRETA ou TAOS: "),
+    input("Modelo do carro 2: ONIX, CRETA ou TAOS: "),
+    input("Modelo do carro 3: ONIX, CRETA ou TAOS: "),
 ]
 
 consumos_km_1 = [
-    float(input("Consumo de combustível do carro 1 (Km/L): "))
-    float(input("Consumo de combustível do carro 2 (Km/L): "))
-    float(input("Consumo de combustível do carro 3 (Km/L): "))
+    float(input(f"Consumo de combustível do carro {modelos_carros} (Km/L): ")),
+    float(input(f"Consumo de combustível do carro {modelos_carros} (Km/L): ")),
+    float(input(f"Consumo de combustível do carro {modelos_carros} (Km/L): "))
 ]
 
 distancia = float(input("Distancia a ser percorrida (KM): "))
