@@ -1,40 +1,19 @@
-def calcular_consumo_combustivel(modelo_carro, consumo_km_1, distancia, preco_gasolina):
-    consumo_litros = distancia / consumo_km_1
-    custo_total = consumo_litros * preco_gasolina
-    return {
-        'consumo_litros': consumo_litros,
-        'custo_total': custo_total,
-    }
+# # Inicializando listas para armazenar os dados dos carros
+# carros = []
+# consumo = []
 
 
-modelos_carros = [
-    input("Modelo do carro 1 ONIX, CRETA ou TAOS: "),
-    input("Modelo do carro 2: ONIX, CRETA ou TAOS: "),
-    input("Modelo do carro 3: ONIX, CRETA ou TAOS: "),
-]
+carro = []
+consumo = []
 
-consumos_km_1 = [
-    float(input(f"Consumo de combustível do carro {modelos_carros} (Km/L): ")),
-    float(input(f"Consumo de combustível do carro {modelos_carros} (Km/L): ")),
-    float(input(f"Consumo de combustível do carro {modelos_carros} (Km/L): "))
-]
+for i in range(1, 4):
+    carro = input(f"Carro {i}: ")
+    consumo.append(km_por_litro)
 
-distancia = float(input("Distancia a ser percorrida (KM): "))
-preco_gasolina = float(input("Preço da gasolina (R$/L): "))
+distancia = 500
+preco_gasolina = 5.58
 
-resultados = []
-for modelo_carro, consumos_km_1 in zip(modelos_carros, consumos_km_1):
-    resultado = calcular_consumo_combustivel(
-        modelo_carro, consumos_km_1, distancia, preco_gasolina)
-    resultados.append({
-        'modelo_carro': modelo_carro,
-        **resultado,
-    })
-
-for resultado in resultados:
-    print(f"\n**{resultado['modelo_carro']}**")
-    print(f"Consumo de combustivel: {resultado['consumo_litros']:.2f}")
-    print(f"Custo total: R${resultado['custo_total']:.2f}")
-
-carro_mais_economico = min(resultados, key=lambda x: x['consumo_litros'])
-print(f"\n**Carro mais econômico:** {carro_mais_economico['modelo_carro']}")
+for i in range (3):
+    litros_necessarios = distancia / consumo[i]
+    custo = litros_necessarios * preco_gasolina
+    print(f"{carro[i]} - {consumo[i]} - {litros_necessarios:.1f} litros - R${custo:.2f}")
